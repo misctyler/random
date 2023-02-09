@@ -15,6 +15,7 @@ model.add(Dense(units=1, input_shape=(1,)))
 model.compile(optimizer='sgd', loss='mean_squared_error')
 
 # Train the model
-model.fit(x, y, epochs=100)
+model.fit(x, y, epochs=1000)
 
 # Use the model to make predictions
+print(model.predict([[5]]))
