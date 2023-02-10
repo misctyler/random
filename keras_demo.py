@@ -7,6 +7,7 @@ from sklearn.preprocessing import OneHotEncoder
 
 data = pd.read_csv('turntable/Record-Collection.csv')
 
+
 # Create a dataset
 x = np.array([[1], [2], [3], [4]])
 y = np.array([[0], [-1], [-2], [-3]])
@@ -19,7 +20,8 @@ model.add(Dense(units=1, input_shape=(1,)))
 model.compile(optimizer='sgd', loss='mean_squared_error')
 
 # Train the model
-model.fit(x, y, epochs=1000)
+model.fit(x, y, epochs=100)
 
 # Use the model to make predictions
 print(model.predict([[6]]))
+print(data.columns)
