@@ -1,7 +1,11 @@
 import numpy as np
+import pandas as pd
 import keras
 from keras.models import Sequential
 from keras.layers import Dense
+from sklearn.preprocessing import OneHotEncoder
+
+data = pd.read_csv('turntable/Record-Collection.csv')
 
 # Create a dataset
 x = np.array([[1], [2], [3], [4]])
@@ -18,4 +22,4 @@ model.compile(optimizer='sgd', loss='mean_squared_error')
 model.fit(x, y, epochs=1000)
 
 # Use the model to make predictions
-print(model.predict([[5]]))
+print(model.predict([[6]]))
